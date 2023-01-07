@@ -1,0 +1,109 @@
+/* .subject {
+    max-width: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+}
+
+.subjectt {
+    max-width: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+
+.bet {
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+    margin-bottom: 5px;
+}
+.subject {
+    max-width: 3%;
+}
+
+.gameInfo {
+    display: flex;
+    gap: 20px;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.end {
+    justify-content: end;
+}
+
+.teamName {
+    color: white;
+}
+
+.teamLogo {
+    max-width: 6%;
+}
+
+.date {
+    color: white;
+}
+
+.tournament {
+    max-width: 4%;
+}
+
+
+
+
+@media (max-width:1200px) {
+    .subject {
+        max-width: 4%;
+    }
+    .teamLogo {
+        max-width: 8%;
+    }
+    .tournament {
+        max-width: 6%;
+    }
+}
+
+@media (max-width:992px) {
+    .teamLogo {
+        max-width: 10%;
+    }
+}
+
+@media (max-width:768px) {
+    .bet {
+        padding: 10px 10px
+    }
+    .subject {
+        max-width: 6%;
+    }
+    .teamLogo {
+        max-width: 14%;
+    }
+    .tournament {
+        max-width: 8%;
+    }
+} 
+
+@media (max-width:500px) {
+    .subject {
+        max-width: 6%;
+    }
+    .teamLogo {
+        max-width: 16%;
+    }
+    .tournament {
+        max-width: 8%;
+    }
+    .teamName {
+        font-size: 14px;
+    }
+}
