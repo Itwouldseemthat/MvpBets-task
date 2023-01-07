@@ -18,7 +18,7 @@
     padding: 10px 30px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: black;
     margin-bottom: 5px;
 }
@@ -29,12 +29,14 @@
 .gameInfo {
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 .team {
     display: flex;
     align-items: center;
     gap: 10px;
+    min-width: 200px;
 }
 
 .end {
@@ -46,8 +48,9 @@
 }
 
 .teamLogo {
-    max-width: 6%;
+    max-width: 42px
 }
+/* 6%; */
 
 .date {
     color: white;
@@ -65,8 +68,9 @@
         max-width: 4%;
     }
     .teamLogo {
-        max-width: 8%;
+        max-width: 28px
     }
+    /* 8%; */
     .tournament {
         max-width: 6%;
     }
@@ -74,8 +78,15 @@
 
 @media (max-width:992px) {
     .teamLogo {
-        max-width: 10%;
+        max-width: 32px;
     }
+    .team {
+        min-width: auto;
+    }
+    .teamName {
+        width: 82px;
+    }
+    /* 10%; */
 }
 
 @media (max-width:768px) {
@@ -86,10 +97,14 @@
         max-width: 6%;
     }
     .teamLogo {
-        max-width: 14%;
+        max-width: 32px;
     }
+    /* 14%; */
     .tournament {
         max-width: 8%;
+    }
+    .team {
+        min-width: auto;
     }
 } 
 
@@ -98,12 +113,14 @@
         max-width: 6%;
     }
     .teamLogo {
-        max-width: 16%;
+        max-width: 28px;
     }
+    /* 16%; */
     .tournament {
         max-width: 8%;
     }
     .teamName {
         font-size: 14px;
+        width: 68px;
     }
 }
