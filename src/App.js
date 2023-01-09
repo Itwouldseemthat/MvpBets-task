@@ -57,6 +57,9 @@ function App() {
         team2logo: westham,
         tournament: euleague,
         tournName: "UEFA Europa League. Season 2022/2023",
+        win1: "Home x1.22",
+        drow: "Drow x2.86",
+        win2: "Guest x2.25",
     },
     {
         subj: footballLogo,
@@ -68,6 +71,9 @@ function App() {
         team2logo: liverpool,
         tournament: ukcup,
         tournName: "The Emirates FA Cup. Season 2022/2023",
+        win1: "Home x2.22",
+        drow: "Drow x2.4",
+        win2: "Guest x1.75",
     }
   ]
 
@@ -82,6 +88,9 @@ function App() {
       team2logo: chelsea,
       tournament: ukcup, 
       tournName: "The Emirates FA Cup. Season 2022/2023",
+      win1: "Home x1.55",
+      drow: "Drow x3.12",
+      win2: "Guest x2.76",
     },
     {
       subj: footballLogo,
@@ -93,6 +102,9 @@ function App() {
       team2logo: lyon,
       tournament: euleague, 
       tournName: "UEFA Europa League. Season 2022/2023",
+      win1: "Home x1.22",
+      drow: "Drow x2.86",
+      win2: "Guest x2.25",
     },
     {
       subj: basketlogo,
@@ -103,7 +115,10 @@ function App() {
       team2: "Phoenix Suns",
       team2logo: phoenix,
       tournament: nbalogo,
-      tournName: "NBA Play-In Tournament. Season 2022/2023", 
+      tournName: "NBA Play-In Tournament. Season 2022/2023",
+      win1: "Home x1.87",
+      drow: "Drow x2.23",
+      win2: "Guest x1.91", 
     },
     {
       subj: basketlogo,
@@ -114,12 +129,12 @@ function App() {
       team2: "Olympiacos",
       team2logo: olympiakos,
       tournament: eurobasket,
-      tournName: "Euroleague Basketball. Season 2022/2023" 
+      tournName: "Euroleague Basketball. Season 2022/2023",
+      win1: "Home x3.11",
+      drow: "Drow x2.86",
+      win2: "Guest x1.33", 
     },
   ]
-
-
-
 
 
   const navigate = useNavigate();
@@ -133,6 +148,17 @@ function App() {
     localStorage.setItem('event', JSON.stringify(eventInfo))
   }
 
+  const [notificDisplay, setNotificDisplay] = useState(false)
+
+  const [bet, setBet] = useState()
+
+  function clickOnBet(event, bet) {
+    event.preventDefault();
+    setBet(bet);
+    setNotificDisplay(true);
+    goToHomepage();
+    setTimeout(() => setNotificDisplay(false), 3000);
+  }
 
   return (
     <div className="App">
@@ -140,10 +166,12 @@ function App() {
         <Route
           path="/"
           element={
-            <Homepage 
+            <Homepage
+              notificDisplay={notificDisplay} 
               currEvents={currEvents}
               upcomingEvents={upcomingEvents}
               clickOnEvent={clickOnEvent}
+              bet={bet}
             />
           }
           exact 
@@ -151,7 +179,7 @@ function App() {
         <Route 
           path="/event"
           element={
-            <EventPage />
+            <EventPage clickOnBet={clickOnBet} />
           }
         />
       </Routes>

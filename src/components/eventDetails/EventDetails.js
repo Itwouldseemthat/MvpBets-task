@@ -18,11 +18,6 @@ const EventDetails = (props) => {
         setDisabled(false);
     }
 
-    function onSubmit(event) {
-        event.preventDefault();
-        console.log(bet)
-    }
-
     
 
     return (
@@ -34,7 +29,7 @@ const EventDetails = (props) => {
                 </div>
                 <img className="subj" src={eventInfo.subj}></img>
             </div>
-            <form className="detail" onSubmit={(event) => onSubmit(event)}>
+            <form className="detail" onSubmit={(event) => props.clickOnBet(event, bet)}>
                 <div className="head">
                     <div className="gameTime">{eventInfo.day}</div>
                     <div className="gameTime">{eventInfo.time}</div>
@@ -52,9 +47,9 @@ const EventDetails = (props) => {
                                 name="getBet"
                                 className="btnBet"
                                 value={bet}
-                                onChange={() => chooseBet('Team 1 win')}
+                                onChange={() => chooseBet(eventInfo.win1)}
                             />
-                            <span className="radioText">Team 1 win</span>
+                            <span className="radioText">{eventInfo.win1}</span>
                         </label>
                         <label className="label">
                             <input 
@@ -62,9 +57,9 @@ const EventDetails = (props) => {
                                 name="getBet"
                                 className="btnBet"
                                 value={bet}
-                                onChange={() => chooseBet('Drow')}
+                                onChange={() => chooseBet(eventInfo.drow)}
                             />
-                            <span className="radioText">Drow</span>
+                            <span className="radioText">{eventInfo.drow}</span>
                         </label>
                         <label className="label">
                             <input 
@@ -72,9 +67,9 @@ const EventDetails = (props) => {
                                 name="getBet"
                                 className="btnBet"
                                 value={bet}
-                                onChange={() => chooseBet('Team 2 win')}
+                                onChange={() => chooseBet(eventInfo.win2)}
                             />
-                            <span className="radioText">Team 2 win</span>
+                            <span className="radioText">{eventInfo.win2}</span>
                         </label>
                     </div>
                     <div className="teamm">

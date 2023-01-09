@@ -7,7 +7,10 @@ const EventPage = (props) => {
     return (
         <div className="eventpage">
             <Header />
-            <EventContent getEvent={props.getEvent}/>
+            <EventContent 
+                getEvent={props.getEvent}
+                clickOnBet={props.clickOnBet}
+            />
         </div>
     )
 }

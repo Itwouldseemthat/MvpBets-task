@@ -136,21 +136,37 @@
 
 
 @media (max-width:992px) {
+    /* .logoTeam {
+        max-width: 42px;
+    }
+    .nameTeam {
+        font-size: 16px;
+    } */
+    .chooseBet {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .radioText {
+        min-width: 112px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width:768px) {
     .logoTeam {
         max-width: 42px;
     }
     .nameTeam {
         font-size: 16px;
     }
-}
-
-@media (max-width:768px) {
     .chooseBet {
         flex-direction: column;
         gap: 10px;
     }
     .teamm {
         flex-direction: column;
+        width: 127px;
     }
     .notMob {
         display: none;
@@ -166,5 +182,7 @@
 }
 
 @media (max-width:500px) {
-    
+    .nameTeam {
+        max-width: 96px;
+    }
 }
