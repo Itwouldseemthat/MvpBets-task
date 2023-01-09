@@ -6,7 +6,11 @@ const Content = (props) => {
     return (
         <div className="container">
             <Banner />
-            <BetsList currEvents={props.currEvents} upcomingEvents={props.upcomingEvents}/>
+            <BetsList 
+                currEvents={props.currEvents} 
+                upcomingEvents={props.upcomingEvents}
+                clickOnEvent={props.clickOnEvent}
+            />
         </div>
     )
 }

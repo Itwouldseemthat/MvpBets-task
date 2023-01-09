@@ -7,7 +7,7 @@ const EventContent = (props) => {
     return (
         <div className="container">
             <Banner />
-            <EventDetails />
+            <EventDetails getEvent={props.getEvent} />
         </div>
     )
 }

@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import './App.css';
 import Homepage from "./components/homepage/homepage";
+import EventPage from "./components/eventpage/EventPage";
+
+// images
 import footballLogo from './image/football.png';
 import basketlogo from './image/basketlog.png';
 import barselona from './image/barselona.png';
@@ -19,7 +23,8 @@ import eurobasket from './image/eurobasket.png';
 import chelsea from './image/Chelsea.png';
 import  eintracht from './image/Eintracht.png';
 import nbalogo from './image/nba-logo.png';
-import EventPage from "./components/eventpage/EventPage";
+// images
+
 
 
 function App() {
@@ -51,6 +56,7 @@ function App() {
         team2: "West Ham",
         team2logo: westham,
         tournament: euleague,
+        tournName: "UEFA Europa League. Season 2022/2023",
     },
     {
         subj: footballLogo,
@@ -61,6 +67,7 @@ function App() {
         team2: "Liverpool",
         team2logo: liverpool,
         tournament: ukcup,
+        tournName: "The Emirates FA Cup. Season 2022/2023",
     }
   ]
 
@@ -74,6 +81,7 @@ function App() {
       team2: "Chelsea",
       team2logo: chelsea,
       tournament: ukcup, 
+      tournName: "The Emirates FA Cup. Season 2022/2023",
     },
     {
       subj: footballLogo,
@@ -84,6 +92,7 @@ function App() {
       team2: "Lyon",
       team2logo: lyon,
       tournament: euleague, 
+      tournName: "UEFA Europa League. Season 2022/2023",
     },
     {
       subj: basketlogo,
@@ -93,7 +102,8 @@ function App() {
       day: getDateString(2),
       team2: "Phoenix Suns",
       team2logo: phoenix,
-      tournament: nbalogo, 
+      tournament: nbalogo,
+      tournName: "NBA Play-In Tournament. Season 2022/2023", 
     },
     {
       subj: basketlogo,
@@ -103,16 +113,51 @@ function App() {
       day: getDateString(3),
       team2: "Olympiacos",
       team2logo: olympiakos,
-      tournament: eurobasket, 
+      tournament: eurobasket,
+      tournName: "Euroleague Basketball. Season 2022/2023" 
     },
   ]
 
+
+
+
+
+  const navigate = useNavigate();
+
+  const goToHomepage = () => navigate('/');
+  const goToEventpage = () => navigate('/event');
+
+
+  function clickOnEvent(eventInfo) {
+    goToEventpage();
+    localStorage.setItem('event', JSON.stringify(eventInfo))
+  }
+
+
   return (
     <div className="App">
-      {/* <Homepage currEvents={currEvents} upcomingEvents={upcomingEvents}/> */}
-      <EventPage />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Homepage 
+              currEvents={currEvents}
+              upcomingEvents={upcomingEvents}
+              clickOnEvent={clickOnEvent}
+            />
+          }
+          exact 
+        />
+        <Route 
+          path="/event"
+          element={
+            <EventPage />
+          }
+        />
+      </Routes>
     </div>
   );
 }
 
 export default App;
+

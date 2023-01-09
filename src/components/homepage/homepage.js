@@ -7,7 +7,11 @@ const Homepage = (props) => {
     return (
         <div className="homepage">
             <Header />
-            <Content currEvents={props.currEvents} upcomingEvents={props.upcomingEvents}/>
+            <Content 
+                currEvents={props.currEvents} 
+                upcomingEvents={props.upcomingEvents}
+                clickOnEvent={props.clickOnEvent}
+            />
         </div>
     )
 }

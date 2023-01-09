@@ -1,8 +1,9 @@
 import React from "react";
 import './BetBlock.css';
+import { Link } from "react-router-dom";
+import {useNavigate} from 'react-router-dom';
 
 const BetBlock = (props) => {
-
 
 
 
@@ -11,7 +12,7 @@ const BetBlock = (props) => {
         <div className="bets">
             {
                 props.events.map((item, index) => (
-                    <div className="bet" key={index}>
+                    <div className="bet" key={index} onClick={() => props.clickOnEvent(item)}>
                         <img className="subject" src={item.subj}></img>
                         <div className="gameInfo">
                             <div className="team end">

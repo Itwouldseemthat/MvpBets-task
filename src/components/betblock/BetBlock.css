@@ -6,6 +6,12 @@
     background-color: black;
     margin-bottom: 5px;
 }
+
+.bet:hover {
+    transform: translateY(-1px);
+    cursor: pointer;
+}
+
 .subject {
     max-width: 3%;
 }

@@ -7,7 +7,7 @@ const EventPage = (props) => {
     return (
         <div className="eventpage">
             <Header />
-            <EventContent />
+            <EventContent getEvent={props.getEvent}/>
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './EventDetails.css';
 import euleugue from '../../image/europeLegue.png';
 import football from '../../image/football.png';
@@ -11,6 +11,8 @@ const EventDetails = (props) => {
 
     const [isDisabled, setDisabled] = useState(true);
 
+    const [eventInfo, setEventInfo] = useState(JSON.parse(localStorage.getItem('event')))
+
     function chooseBet(radio) {
         setBet(radio);
         setDisabled(false);
@@ -21,27 +23,27 @@ const EventDetails = (props) => {
         console.log(bet)
     }
 
-
+    
 
     return (
         <div className="eventDetails">
             <div className="eventTitle">
                 <div className="tourn">
-                    <img className="tournImg" src={euleugue}></img>
-                    <div className="tournName">UEFA Europa League. Season 2022/2023</div>
+                    <img className="tournImg" src={eventInfo.tournament}></img>
+                    <div className="tournName">{eventInfo.tournName}</div>
                 </div>
-                <img className="subj" src={football}></img>
+                <img className="subj" src={eventInfo.subj}></img>
             </div>
             <form className="detail" onSubmit={(event) => onSubmit(event)}>
                 <div className="head">
-                    <div className="gameTime">08.01</div>
-                    <div className="gameTime">18:00</div>
+                    <div className="gameTime">{eventInfo.day}</div>
+                    <div className="gameTime">{eventInfo.time}</div>
                     <button type="submit" className="btn" disabled={isDisabled}>Bet</button>
                 </div>
                 <div className="detailBet">
                     <div className="teamm">
-                        <img className="logoTeam" src={barselona}></img>
-                        <div className="nameTeam">Barcelona</div>
+                        <img className="logoTeam" src={eventInfo.team1logo}></img>
+                        <div className="nameTeam">{eventInfo.team1}</div>
                     </div>
                     <div className="chooseBet">
                         <label className="label">
@@ -76,9 +78,9 @@ const EventDetails = (props) => {
                         </label>
                     </div>
                     <div className="teamm">
-                        <div className="nameTeam notMob">West Ham</div>
-                        <img className="logoTeam" src={westham}></img>
-                        <div className="nameTeam mob">West Ham</div>
+                        <div className="nameTeam notMob">{eventInfo.team2}</div>
+                        <img className="logoTeam" src={eventInfo.team2logo}></img>
+                        <div className="nameTeam mob">{eventInfo.team2}</div>
                     </div>
                 </div>
             </form>
