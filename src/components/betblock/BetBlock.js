@@ -1,39 +1,8 @@
 import React from "react";
 import './BetBlock.css';
-import footballLogo from '../../image/football.png';
-import basketlogo from '../../image/basketlog.png';
-import barselona from '../../image/barselona.png';
-import euleague from '../../image/europeLegue.png';
-import westham from '../../image/westham.png';
-import memphis from '../../image/memphis.png';
-import phoenix from '../../image/Phoenix.png';
-import nba from '../../image/nba.png';
-import ukcup from '../../image/ukcup.png';
 
 const BetBlock = (props) => {
 
-    const currEvents = [
-        {
-            subj: footballLogo,
-            team1: "Barcelona",
-            team1logo: barselona,
-            time: "16:00",
-            day: "06.01",
-            team2: "West Ham",
-            team2logo: westham,
-            tournament: euleague,
-        },
-        {
-            subj: basketlogo,
-            team1: "Memphis Grizzlies",
-            team1logo: memphis,
-            time: "18:00",
-            day: "07.01",
-            team2: "Phoenix suns",
-            team2logo: phoenix,
-            tournament: ukcup,
-        }
-    ]
 
 
 
@@ -41,7 +10,7 @@ const BetBlock = (props) => {
     return (
         <div className="bets">
             {
-                currEvents.map((item, index) => (
+                props.events.map((item, index) => (
                     <div className="bet" key={index}>
                         <img className="subject" src={item.subj}></img>
                         <div className="gameInfo">

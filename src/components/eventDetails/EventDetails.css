@@ -1,0 +1,169 @@
+.eventDetails {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 980px;
+    margin-bottom: 50px;
+}
+
+
+.eventTitle {
+    display: flex;
+    align-items: center;
+    background: black;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.tourn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.tournImg {
+    max-width: 78px;
+}
+
+.tournName {
+    color: white;
+    font-size: 22px;
+}
+
+.subj {
+    max-width: 38px;
+}
+
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    padding: 10px;
+    margin: 5px 0px;
+}
+
+
+.gameTime {
+    color: white;
+    font-weight: bold;
+}
+
+.btn {
+    padding: 4px 14px;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    outline: none;
+    color: rgb(246, 255, 0);
+    font-weight: bold;
+    text-shadow: 0 0 5px white,0 0 10px #F00,0 0 15px #F7FF00,0 0 20px white;
+    background: #c15b21;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn:not(:disabled):hover {
+    cursor: pointer;
+    transform: translateY(-1px);
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+    color: white;
+    background: #c15c2177;
+}
+
+.detailBet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    padding: 20px;
+}
+
+.teamm {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chooseBet {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.logoTeam {
+    max-width: 54px;
+}
+
+.nameTeam {
+    color: white;
+    font-size: 20px;
+}
+
+.btnBet {
+    display: none;
+}
+
+.label > input[type=radio]:checked + span {
+    background: #c15b21;
+}
+
+.label:active {
+    transform: translateY(-1px);
+}
+
+
+.radioText {
+    color: white;
+    border: 1px solid #c15b21;
+    padding: 5px 10px;
+    background-color: #c15c2188;
+}
+
+.radioText:hover {
+    background-color: #c15b21;
+    cursor: pointer;
+}
+
+.mob {
+    display: none;
+}
+
+
+
+
+@media (max-width:992px) {
+    .logoTeam {
+        max-width: 42px;
+    }
+    .nameTeam {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:768px) {
+    .chooseBet {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .teamm {
+        flex-direction: column;
+    }
+    .notMob {
+        display: none;
+    }
+    .mob {
+        display: block;
+    }
+    .radioText {
+        min-width: 112px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width:500px) {
+    
+}

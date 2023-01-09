@@ -7,11 +7,11 @@ const BetsList = (props) => {
         <div className="betsList">
             <div className="Events">
                 <div className="Title">The current events</div>
-                <BetBlock />
+                <BetBlock events={props.currEvents}/>
             </div>
             <div className="Events">
                 <div className="Title">The upcoming events</div>
-                <BetBlock />
+                <BetBlock events={props.upcomingEvents}/>
             </div>
         </div>
     )

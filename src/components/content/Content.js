@@ -6,7 +6,7 @@ const Content = (props) => {
     return (
         <div className="container">
             <Banner />
-            <BetsList />
+            <BetsList currEvents={props.currEvents} upcomingEvents={props.upcomingEvents}/>
         </div>
     )
 }

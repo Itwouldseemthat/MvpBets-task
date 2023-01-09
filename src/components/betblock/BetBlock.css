@@ -1,19 +1,3 @@
-/* .subject {
-    max-width: 3%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 7px;
-}
-
-.subjectt {
-    max-width: 4%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
-
 .bet {
     padding: 10px 30px;
     display: flex;
@@ -84,7 +68,7 @@
         min-width: auto;
     }
     .teamName {
-        width: 82px;
+        width: 90px;
     }
     /* 10%; */
 }
@@ -121,6 +105,14 @@
     }
     .teamName {
         font-size: 14px;
-        width: 68px;
+        width: 77px;
     }
+}
+
+@media (max-width:400px) {
+    .teamName {
+        font-size: 12px;
+        width: 66px;
+    }
+    
 }
