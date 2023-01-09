@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/MvpBets-task/static/css/main.5bbd203d.css",
+    "main.js": "/MvpBets-task/static/js/main.eb88627e.js",
+    "static/media/foot.png": "/MvpBets-task/static/media/foot.d272ee5edc5f0e5c4b23.png",
+    "static/media/liverpool.png": "/MvpBets-task/static/media/liverpool.a1dfb6ba2388d37f5720.png",
+    "static/media/football.png": "/MvpBets-task/static/media/football.a088e159d276b599df95.png",
+    "static/media/manchester.png": "/MvpBets-task/static/media/manchester.b6cb7a119de919bbe7d3.png",
+    "static/media/Chelsea.png": "/MvpBets-task/static/media/Chelsea.5b958e98be319ae61597.png",
+    "static/media/mancity.png": "/MvpBets-task/static/media/mancity.0b19a67745c13a230230.png",
+    "static/media/barselona.png": "/MvpBets-task/static/media/barselona.b30fabbcd1ec09415bdb.png",
+    "static/media/Eintracht.png": "/MvpBets-task/static/media/Eintracht.3e9315933b96931d67b3.png",
+    "static/media/westham.png": "/MvpBets-task/static/media/westham.36d630511923d277d3f2.png",
+    "static/media/anadolu.png": "/MvpBets-task/static/media/anadolu.b3a5708bdb0ab6495252.png",
+    "static/media/Phoenix.png": "/MvpBets-task/static/media/Phoenix.ac43b3fe88b17f86f4c6.png",
+    "static/media/lyon.png": "/MvpBets-task/static/media/lyon.f56e94272107e9e3aea4.png",
+    "static/media/ukcup.png": "/MvpBets-task/static/media/ukcup.eb9bf25c1b67f656c284.png",
+    "static/media/Olympiakos.png": "/MvpBets-task/static/media/Olympiakos.920464240886fb6926c6.png",
+    "static/media/basketlog.png": "/MvpBets-task/static/media/basketlog.941ef114fa7668aec991.png",
+    "static/media/europeLegue.png": "/MvpBets-task/static/media/europeLegue.b88fb29acbd4aac94dfc.png",
+    "static/media/memphis.png": "/MvpBets-task/static/media/memphis.dcca8daf25ed3da7e3f6.png",
+    "static/media/nba-logo.png": "/MvpBets-task/static/media/nba-logo.d014641870cfba6568c7.png",
+    "index.html": "/MvpBets-task/index.html",
+    "main.5bbd203d.css.map": "/MvpBets-task/static/css/main.5bbd203d.css.map",
+    "main.eb88627e.js.map": "/MvpBets-task/static/js/main.eb88627e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5bbd203d.css",
+    "static/js/main.eb88627e.js"
+  ]
+}
