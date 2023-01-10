@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/MvpBets-task/static/css/main.5bbd203d.css",
-    "main.js": "/MvpBets-task/static/js/main.eb88627e.js",
+    "main.css": "/MvpBets-task/static/css/main.096184df.css",
+    "main.js": "/MvpBets-task/static/js/main.a5844ae8.js",
     "static/media/foot.png": "/MvpBets-task/static/media/foot.d272ee5edc5f0e5c4b23.png",
     "static/media/liverpool.png": "/MvpBets-task/static/media/liverpool.a1dfb6ba2388d37f5720.png",
     "static/media/football.png": "/MvpBets-task/static/media/football.a088e159d276b599df95.png",
@@ -21,11 +21,11 @@
     "static/media/memphis.png": "/MvpBets-task/static/media/memphis.dcca8daf25ed3da7e3f6.png",
     "static/media/nba-logo.png": "/MvpBets-task/static/media/nba-logo.d014641870cfba6568c7.png",
     "index.html": "/MvpBets-task/index.html",
-    "main.5bbd203d.css.map": "/MvpBets-task/static/css/main.5bbd203d.css.map",
-    "main.eb88627e.js.map": "/MvpBets-task/static/js/main.eb88627e.js.map"
+    "main.096184df.css.map": "/MvpBets-task/static/css/main.096184df.css.map",
+    "main.a5844ae8.js.map": "/MvpBets-task/static/js/main.a5844ae8.js.map"
   },
   "entrypoints": [
-    "static/css/main.5bbd203d.css",
-    "static/js/main.eb88627e.js"
+    "static/css/main.096184df.css",
+    "static/js/main.a5844ae8.js"
   ]
 }
