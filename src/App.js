@@ -45,7 +45,7 @@ function App() {
   }
 
 
-
+// data obj
   const currEvents = [
     {
         subj: footballLogo,
@@ -135,7 +135,7 @@ function App() {
       win2: "Guest x1.33", 
     },
   ]
-
+// data obj
 
   const navigate = useNavigate();
 
@@ -157,7 +157,7 @@ function App() {
     setBet(bet);
     setNotificDisplay(true);
     goToHomepage();
-    setTimeout(() => setNotificDisplay(false), 3000);
+    setTimeout(() => setNotificDisplay(false), 5000);
   }
 
   return (
